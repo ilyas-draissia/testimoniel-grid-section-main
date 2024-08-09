@@ -1,0 +1,248 @@
+:root{
+    --weight-small: 500;
+    --weight-big: 600;
+
+    --font-family: "Barlow Semi Condensed", sans-serif;
+
+    --pr-color-violet:hsl(263, 55%, 52%);
+    --pr-color-darkblue:hsl(219, 29%, 14%);
+    --pr-color-lightblue:hsl(217, 19%, 35%);
+    --pr-color-white:hsl(0, 0%, 100%);
+
+    --nt-color-light-grey-blue:hsl(210, 46%, 95%);
+    --nt-color-light-grey:hsl(0, 0%, 81%);
+}
+body{
+    font-size: 13px;
+    font-family: var(--font-family);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--nt-color-light-grey-blue);
+}
+ .container{
+    max-width: 1200px;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,min-content);
+    gap: 1rem;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+}
+img{
+    border-radius: 50%;
+    height: 2.2rem;
+}
+.card-1 img, .card-4 img{
+    border: 3px solid hsl(263, 60%, 39%);
+}
+.card-3 img, .card-5 img{
+    border: 3px solid var(--nt-color-light-grey-blue);
+}
+.card-2 img{
+    border: 3px solid var(--pr-color-darkblue);
+}
+h1, h2{
+    font-weight: var(--weight-big);
+    line-height: 1.2;
+}
+
+p{
+    opacity: 70%;
+    font-weight: var(--weight-small);
+}
+#item{
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2em;
+    display: flex;
+    flex-flow: column ;
+    gap:0.8em;
+}
+.card-1{
+    grid-row:1/1 ;
+    grid-column: 1/span 2;
+    background: url(images/bg-pattern-quotation.svg) ,linear-gradient(to bottom ,hsl(263, 55%, 52%), hsl(263, 66%, 61%));   
+    background-repeat: no-repeat;
+    background-position:80% 0
+}
+
+.card-2{
+    grid-row:1 /1 ;
+    grid-column: 3/4;
+    background-color: var(--pr-color-lightblue);
+}
+.card-3{
+    grid-row:2 /2 ;
+    grid-column: 1/1;
+    background-color: var(--pr-color-white);
+}
+.card-4{
+    grid-row:2/2 ;
+    grid-column: 2/span 2;
+    background-color: var(--pr-color-darkblue);
+}
+.card-5{
+    grid-row:1/span 2 ;
+    grid-column: 4/4;
+    background-color: var(--pr-color-white);
+}
+
+.card-1, .card-2, .card-4{
+    color: var(--nt-color-light-grey);
+}
+.card-3, .card-5{
+    color: var(--pr-color-lightblue);
+}
+@media (max-width:850px) {
+    .container{
+        max-width: 800px;
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,min-content);
+        gap: 0.5rem;
+
+    #item{
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 1.5em;
+        display: flex;
+        flex-flow: column ;
+        gap:0.8em;
+    }
+        .card-1{
+            grid-row:1/1 ;
+            grid-column: 1/span 2;
+            background: url(images/bg-pattern-quotation.svg) ,linear-gradient(to bottom ,hsl(263, 55%, 52%), hsl(263, 66%, 61%));   
+            background-repeat: no-repeat;
+            background-position:80% 0
+        }
+        
+        .card-2{
+            grid-row:1 /1 ;
+            grid-column: 3/4;
+            background-color: var(--pr-color-lightblue);
+        }
+        .card-3{
+            grid-row:2 /2 ;
+            grid-column: 3/4;
+            background-color: var(--pr-color-white);
+        }
+        .card-4{
+            grid-row:2/2 ;
+            grid-column: 1/span 2;
+            background-color: var(--pr-color-darkblue);
+        }
+        .card-5{
+            grid-row:3/3 ;
+            grid-column: 1/span 3;
+            background-color: var(--pr-color-white);
+        }
+        
+    }
+}
+@media (max-width:600px) {
+    .container{
+        max-width: 550px;
+        padding: 1rem 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,min-content);
+        gap: 0.5rem;
+
+    #item{
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 1.5em;
+        display: flex;
+        flex-flow: column ;
+        gap:0.8em;
+    }
+        .card-1{
+            grid-row:1/1 ;
+            grid-column: 1/span 2;
+            background: url(images/bg-pattern-quotation.svg) ,linear-gradient(to bottom ,hsl(263, 55%, 52%), hsl(263, 66%, 61%));   
+            background-repeat: no-repeat;
+            background-position:80% 0;
+        }
+        
+        .card-2{
+            grid-row:2 /2 ;
+            grid-column: 1/1;
+            background-color: var(--pr-color-lightblue);
+        }
+        .card-3{
+            grid-row:2 /2 ;
+            grid-column: 2/2;
+            background-color: var(--pr-color-white);
+        }
+        .card-4{
+            grid-row:3/3 ;
+            grid-column: 1/span 2;
+            background-color: var(--pr-color-darkblue);
+        }
+        .card-5{
+            grid-row:4/4 ;
+            grid-column: 1/span 2;
+            background-color: var(--pr-color-white);
+        }
+        
+    }
+}
+@media (max-width:375px) {
+    .container{
+        max-width: 100%;
+        padding: 1rem 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,min-content);
+        gap: 1rem;
+
+    #item{
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 1.5em;
+        display: flex;
+        flex-flow: column ;
+        gap:0.8em;
+    }
+        .card-1{
+            grid-row:1/1 ;
+            grid-column: 1/1;
+            background: url(images/bg-pattern-quotation.svg) ,linear-gradient(to bottom ,hsl(263, 55%, 52%), hsl(263, 66%, 61%));   
+            background-repeat: no-repeat;
+            background-position:80% 0;
+        }
+        
+        .card-2{
+            grid-column: 1/1;
+            grid-row: 2/2 ;
+            background-color: var(--pr-color-lightblue);
+        }
+        .card-3{
+            grid-row:3/3 ;
+            grid-column: 1/1;
+            background-color: var(--pr-color-white);
+        }
+        .card-4{
+            grid-row:4/4 ;
+            grid-column: 1/1;
+            background-color: var(--pr-color-darkblue);
+        }
+        .card-5{
+            grid-row:5/5 ;
+            grid-column: 1/1;
+            background-color: var(--pr-color-white);
+        }
+        
+    }
+}
