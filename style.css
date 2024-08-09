@@ -25,17 +25,16 @@ main{
 }
  .container{
     max-width: 1200px;
-    margin: 1rem 0;
+    margin: 1rem 1rem;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,min-content);
-    gap: 1rem;
+    gap: 1.5rem;
 }
 .profile {
     display: flex;
     align-items: center;
     gap: 1em;
-
 }
 img{
     border-radius: 50%;
@@ -54,7 +53,6 @@ h1, h2{
     font-weight: var(--weight-big);
     line-height: 1.2;
 }
-
 p{
     opacity: 70%;
     font-weight: var(--weight-small);
@@ -66,6 +64,7 @@ p{
     display: flex;
     flex-flow: column ;
     gap:0.8em;
+    box-shadow: 20px 20px 30px 0px hsl(0, 0%, 75%,0.65);
 }
 .card-1{
     grid-row:1/1 ;
@@ -104,13 +103,17 @@ p{
 }
 @media (max-width:850px) {
     .container{
-        max-width: 800px;
-        padding: 1rem 0;
+        max-width: 100%;
+        padding: 1.5rem 1rem;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(3,min-content);
-        gap: 0.5rem;
-
+        gap: 1rem;
+    }
+    img{
+        border-radius: 50%;
+        height: 2.5rem;
+    }
     #item{
         border-radius: 10px;
         overflow: hidden;
@@ -147,18 +150,20 @@ p{
             grid-column: 1/span 3;
             background-color: var(--pr-color-white);
         }
-        
     }
-}
 @media (max-width:600px) {
     .container{
-        max-width: 550px;
-        padding: 1rem 0.5rem;
+        max-width: 100%;
+        padding: 1.5rem 1rem;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(4,min-content);
-        gap: 0.5rem;
-
+        gap: 1.5rem;
+    }
+    img{
+        border-radius: 50%;
+        height: 2.8rem;
+    }
     #item{
         border-radius: 10px;
         overflow: hidden;
@@ -197,16 +202,20 @@ p{
         }
         
     }
-}
-@media (max-width:375px) {
+
+@media (max-width:430px) {
     .container{
         max-width: 100%;
-        padding: 1rem 0.5rem;
+        padding: 2.5rem 1rem;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5,min-content);
         gap: 1rem;
-
+    }
+    img{
+        border-radius: 50%;
+        height: 3rem;
+    }
     #item{
         border-radius: 10px;
         overflow: hidden;
@@ -245,4 +254,4 @@ p{
         }
         
     }
-}
+
